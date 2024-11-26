@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>jQuery Events</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="fonts/font.css"> <!-- Font face CSS link -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
+   
+       <style>
+        nav ul {
+            list-style-type: none;
+            margin-bottom: 10px;
+            margin: 0;
+        }
+        nav {
+            display:none;
+        }
+
+       </style>
+   
+    </head>
+    <body>
+
+        <div class="mobile-nav">
+            <ul>
+              <li><a href="https://code.jquery.com" title="Jquery CDN link page"target="_Jquery">Jquery CDN</a></li>
+              <li><a href="Events.html" title="Using Jquery Events">Events</a></li>
+              <li><a href="hide.html" title="Hiding Elements using Jquery">Hiding Elements</a></li>
+              <li><a href="slide.html" title="Using Jquery to slide elements">Slide Effect</a></li>
+              <li><a href="animate.html" title="Animate using CSS">Animate</a></li>
+              <li><a href="stop.html" title="Using Jquery to stop animation Effects">Stop Effect</a></li>
+              <li><a href="scroll.html" title="Scrolling to section on document load">Scroll 2 Section</a></li>
+              <li><a href="show.html" title="How to show password in iput using jQuery">Show Password</a></li>
+              <li><a href="dom.html" title="Getting and Setting DOM using jQuery">Get & Set DOM</a></li>
+              <li><a href="Append.html">Append Content</a></li>
+              <li><a href="https://texassouthmostcollege.instructure.com/login">Login</a></li>
+              <li><iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fphilippehongcreative&width=51&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId=235448876515718" width="51" height="20" style="border:none;overflow:hidden"></iframe></li>
+                  </ul>
+          </div>
+          <!-- Add your site or application content here -->
+          <main>
+              <header>
+                  <a class="logo" href="index.html"><img src="img/Dark-jQuery-Logo.png" alt="jQuery" height="40"></a>              
+                    <ul class="main-nav">
+                      <li><a href="Events.html" title="Using Jquery Events">Events</a></li>
+                      <li><a href="hide.html" title="Hiding Elements using Jquery">Hide</a></li>
+                      <li><a href="slide.html" title="Using Jquery to slide elements">Slide</a></li>
+                      <li><a href="animate.html" title="Animate using CSS">Animate</a></li>
+                      <li><a href="stop.html" title="Using Jquery to stop animation Effects">Stop</a></li>
+                      <li><a href="scroll.html" title="Scrolling to section on document load">Scroll</a></li>
+                      <li><a href="show.html" title="How to show password in iput using jQuery">Show</a></li>
+                      <li><a href="dom.html" title="Getting and Setting DOM using jQuery">Get/Set DOM</a></li>
+                      <li><a href="Append.html">Append</a></li>
+                      <!--/ul>
+                      <ul class="right-nav"-->
+                      <li><a href="https://texassouthmostcollege.instructure.com/login" target="Canvas" Title="Canvas Link">Login</a></li>
+                      <li><a href="https://www.youtube.com/playlist?list=PL0eyrZgxdwhy7byLHsVkuhtRV_IpoJU7n"><img src="img/yt_logo_rgb_dark.png" height="15"></a></li>
+                      </ul>
+  
+  
+                  
+              <div class="hamburger-menu">
+                <img src="img/hambuger-icon.svg" alt="Icon Menu">
+              </div>
+              
+              </header><script>
+                $(document).ready(function(){
+                        $("#p1").hover(function(){
+                            $(this).hide();
+                        });
+                        $("#p2").click(function(){
+                            $(this).hide();
+                        });
+                        $("#p3").dblclick(function(){
+                            $(this).hide();
+                        });
+                        $("#p4").mouseout(function(){
+                            $(this).hide();
+                        });
+                var menuTrigger = false;
+                $(document).keypress(function(e){
+                    if (e.which == 13) {
+                        if (menuTrigger === false) {
+                            $("nav").fadeIn(500);
+                            menuTrigger = true;
+                        }
+                        else if (menuTrigger === true) {
+                            $("nav").fadeOut(500);
+                            menuTrigger = false;
+                        }
+                    }
+                }); 
+            });<p id="p1"> Hover me! </p>
+<p id="p2"> Click me! </p>
+<p id="p3"> Double Click me! </p>
+<p id="p4"> Leave me alone! </p>
+<p> Press [enter] </p>
+<style>
+nav ul {
+list-style-type: none;
+margin-bottom: 10px;
+margin: 0;
+}
+nav {
+display:none;
+}
+</style>
